@@ -26,13 +26,13 @@ const tiltElements = document.querySelectorAll('.tilt');
 tiltElements.forEach((card) => {
   card.addEventListener('pointermove', (event) => {
     const rect = card.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 6;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * -6;
-    card.style.transform = `perspective(900px) rotateX(${y}deg) rotateY(${x}deg)`;
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * -10;
+    card.style.transform = `perspective(900px) rotateX(${y}deg) rotateY(${x}deg) scale(1.02)`;
   });
 
   card.addEventListener('pointerleave', () => {
-    card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+    card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
   });
 });
 
