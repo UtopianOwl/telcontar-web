@@ -13,10 +13,16 @@
       <div class="brand">
         <img class="brand-img" src="assets/img/telcontar_banner.jpeg" alt="Telcontar" />
       </div>
-      <nav class="nav-links">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="primary-nav" class="nav-links collapsible">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
-        <a class="btn" href="contact.html">Contact</a>
+        <a class="btn" href="contact.html">Work with us</a>
       </nav>
     </div>
   </header>

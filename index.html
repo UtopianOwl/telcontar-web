@@ -13,15 +13,40 @@
       <div class="brand">
         <img class="brand-img" src="assets/img/telcontar_banner.jpeg" alt="Telcontar" />
       </div>
-      <nav class="nav-links">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="primary-nav" class="nav-links collapsible">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a class="btn" href="contact.html">Contact</a>
+        <a class="btn" href="contact.html">Work with us</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <section class="page-title" id="page-title" data-animate>
+      <h1 class="title-mark">Telcontar</h1>
+    </section>
+
+    <section data-animate style="display:grid; gap:32px; justify-items:center; text-align:center;">
+      <p class="subtitle-mark" style="margin-top: -32px;">
+        Striding toward a more prosperous future, together.
+      </p>
+      <div class="image-block tilt hero-logo circle-image" aria-hidden="true" style="max-width: 240px;"></div>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn" href="contact.html">Start a conversation</a>
+        <a class="btn secondary" href="about.html">Meet the operator</a>
+      </div>
+      <div class="quote" style="max-width: 760px; text-align:left;">
+        <p>“Our approach is straightforward: listen to the people closest to the work, invest in what already makes the business special, and compound small improvements over time.”</p>
+        <span>Drew Nauman · Founder, Telcontar LLC</span>
+      </div>
+    </section>
+
     <section class="hero" data-animate>
       <div class="hero-grid">
         <div class="eyebrow">Pacific Northwest stewardship</div>
@@ -31,10 +56,6 @@
           preserve the craft of essential services, light manufacturing, and operations. 
           We blend disciplined operations with patient capital to keep good companies thriving.
         </p>
-        <div class="hero-actions">
-          <a class="btn" href="contact.html">Start a conversation</a>
-          <a class="btn secondary" href="about.html">Meet the operator</a>
-        </div>
         <div class="pill-row">
           <span class="pill">Legacy-minded</span>
           <span class="pill">Owner-operator</span>
@@ -42,7 +63,6 @@
           <span class="pill">PNW roots</span>
         </div>
       </div>
-      <div class="image-block tilt hero-logo circle-image" aria-hidden="true"></div>
     </section>
 
     <section class="grid-two" data-animate>
@@ -72,7 +92,7 @@
 
     <section class="grid-two" data-animate>
       <div class="quote">
-        <p>“Our approach is simple: listen to the people closest to the work, invest in what already makes the business special, and compound small improvements over time.”</p>
+        <p>“Our approach is straightforward: listen to the people closest to the work, invest in what already makes the business special, and compound small improvements over time.”</p>
         <span>Drew Nauman · Founder, Telcontar LLC</span>
       </div>
       <div class="timeline">

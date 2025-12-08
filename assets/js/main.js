@@ -48,3 +48,48 @@ anchorLinks.forEach((link) => {
     }
   });
 });
+
+// Reveal nav logo once the page title leaves the viewport
+const titleSection = document.getElementById('page-title');
+const navShell = document.querySelector('header.nav-shell');
+
+if (titleSection && navShell && 'IntersectionObserver' in window) {
+  const logoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          navShell.classList.add('show-logo');
+        } else {
+          navShell.classList.remove('show-logo');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  logoObserver.observe(titleSection);
+} else if (navShell) {
+  // Fallback to showing the logo if observers aren't supported
+  navShell.classList.add('show-logo');
+}
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navShell && navLinks) {
+  const toggleMenu = () => {
+    const isOpen = navShell.classList.toggle('menu-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  };
+
+  menuToggle.addEventListener('click', toggleMenu);
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navShell.classList.contains('menu-open')) {
+        toggleMenu();
+      }
+    });
+  });
+}
