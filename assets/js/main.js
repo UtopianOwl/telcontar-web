@@ -49,7 +49,7 @@ anchorLinks.forEach((link) => {
   });
 });
 
-// Reveal nav logo once the title leaves viewport
+// Reveal nav logo once the page title leaves the viewport
 const titleSection = document.getElementById('page-title');
 const navShell = document.querySelector('header.nav-shell');
 
@@ -69,6 +69,7 @@ if (titleSection && navShell && 'IntersectionObserver' in window) {
 
   logoObserver.observe(titleSection);
 } else if (navShell) {
+  // Fallback to showing the logo if observers aren't supported
   navShell.classList.add('show-logo');
 }
 
@@ -86,7 +87,9 @@ if (menuToggle && navShell && navLinks) {
 
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      if (navShell.classList.contains('menu-open')) toggleMenu();
+      if (navShell.classList.contains('menu-open')) {
+        toggleMenu();
+      }
     });
   });
 }
