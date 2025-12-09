@@ -72,7 +72,7 @@ body::after {
 main {
   width: 100%;
   max-width: 1100px;
-  padding: 0 20px;
+  padding: 0 16px;
   margin: 120px auto 90px;
   display: grid;
   gap: 80px;
@@ -89,7 +89,7 @@ main {
   margin: 0;
   font-family: 'Playfair Display', 'Times New Roman', serif;
   font-size: clamp(48px, 8vw, 92px);
-  letter-spacing: 0.26em;
+  letter-spacing: 0.14em;
   color: var(--text);
   text-transform: uppercase;
   text-align: center;
@@ -106,7 +106,7 @@ main {
   margin: 0;
   font-family: 'Playfair Display', 'Times New Roman', serif;
   font-size: clamp(24px, 5vw, 40px);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: var(--text);
   max-width: 760px;
 }
@@ -902,10 +902,20 @@ small {
   main {
     margin-top: 100px;
     gap: 60px;
-    padding: 0 16px;
+    padding: 0 12px;
   }
 
   .hero {
     padding: 16px;
+  }
+
+  .title-mark {
+    font-size: clamp(36px, 9vw, 72px);
+    letter-spacing: 0.12em;
+  }
+
+  .subtitle-mark {
+    font-size: clamp(20px, 6vw, 30px);
+    letter-spacing: 0.04em;
   }
 }
